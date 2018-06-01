@@ -1,0 +1,79 @@
+header {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    height: 300px;
+    width: 80%;
+}
+
+h1 {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    height: 300px;
+    width: 80%;
+}
+.underscore {
+    border: 3px solid black;
+    font-size: 100px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.rightGuess {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.wrongGuess {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+.guessesLeft {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+#counter {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+#spanWin {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
+
+#spanLoss {
+    border: 3px solid black;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px auto;
+    height: 150px;
+    width: 80%;
+}
