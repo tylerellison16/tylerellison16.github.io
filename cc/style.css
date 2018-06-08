@@ -1,0 +1,29 @@
+.button {
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+/* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    margin: 30px 0 10px 210px;
+}
+
+#one {
+    background: url('crystal1.jpg');
+}
+
+#two {
+    background: url('crystal2.jpg');
+}
+
+#three {
+    background: url('crystal3.jpg');
+}
+
+#four {
+    background: url('crystal4.png');
+}
