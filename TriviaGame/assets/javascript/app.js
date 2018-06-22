@@ -58,9 +58,7 @@ $(document).ready(function(){
     function showMe(e) {
     	$(e).show();
     }
-
-// ----------------------------------------------------------------
-//calling functions
-  	start(); // calls the start function
+    
+  	start(); 
   });
 });

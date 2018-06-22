@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>GIPHY search</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    </head>
+    <body>
+
+        <div class="jumbotron jumbotron-fluid" id="heading">
+            <div class="container">
+            <h1 class="display-3">Expolore the world</h1>
+            <p class="lead">Click the buttons to display GIPHYs of the cities you love. Click the GIPHYs to pause and play
+                Search to add more buttons!</p>
+        </div>
+    </div>
+
+
+        </div>
+
+        <form class="form-inline" id="citySearch">
+            <div class="form-group">
+            <label for="cityInput">Search cities here</label>
+            <input type="text" id="cityInput">
+        </div>
+
+        <input id="addCity" type="submit" value="submit">
+        </form>
+
+        <div class="row">
+            <div class="container">
+                <div class="button-group">
+                    <button class="btn btn-primary" id="city" data-search="octopus">octopus</button>
+                    <div id="myButtons"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <span><div id="gifSpace"></div></span>
+            </div>    
+        </div>
+        
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            
+    </body>
+</html>

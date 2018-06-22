@@ -1,0 +1,33 @@
+#heading {
+	background-color: blueviolet;
+	color: #ffffff;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+label {
+	font-size: 18px;
+}
+
+#city {
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#citySearch {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#gifSpace {
+	clear: both;
+	display: inline;
+	flex-wrap: wrap;
+}
+
+.cityGiphy {
+	padding: 2px;
+	width: 80%;
+}
