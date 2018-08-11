@@ -1,0 +1,57 @@
+body {
+    width: 75%;
+   margin: 0px auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+}
+
+container {
+    background-image: "https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi2pJH8iuPcAhUGWK0KHe6yCIsQjRx6BAgBEAU&url=http%3A%2F%2Fwww.fanpop.com%2Fclubs%2Fthe-wild-thornberrys%2Fimages%2F10306080%2Ftitle%2Fwild-thornberrys-photo&psig=AOvVaw2at8o8bJkD2XqZEILVp4C9&ust=1534011132132624"
+}
+
+header {
+    height: 100px;
+}
+
+header > nav {
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+main h1 {
+    font-weight: bold;
+}
+
+ main h2 {
+    font-weight: 300;
+}
+
+#logo-icon {
+   margin-left: 50px;
+   margin-top: 20px;
+}
+
+#logo {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+#head-nav-links {
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.mainpanel{
+   margin: 50px;
+   background-color: rgb(240, 184, 100);
+}
+
+#mainpanel-content {
+    margin: 50px;
+    background-color: whitesmoke;
+}
