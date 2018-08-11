@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html lang="en-us">
@@ -154,3 +155,161 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Train Revolution</title>
+
+  <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+  <!--bootstrap cdn -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!--google fonts lib-->
+	<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--firebase js-->
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+	<!--moment()js-->
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<!--bootstrap js links-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+	<!--Firebase links-->
+	<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container">
+        <div clas="row content">
+            <div class="col-md-12">
+                <div class="card border border-primary">
+                    <div class="card-body">
+                        <h5>Current Time: <span id="current-time"></span></h5>
+                        <table class="table table-hover table-responsive-md">
+                            <thead>
+                                <tr>
+									<th scope="col"></th>
+							    	<th scope="col">Train name <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The name of the train."></i></th>
+							    	<th scope="col">Destination <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The location to where the train is traveling to. For example, Chicago, IL."></i></th>
+							    	<th scope="col">Frequency (min) <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="How often (in minutes) the train leaves."></i></th>
+							    	<th scope="col">Next arrival <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The time the next train will arrive at the destination."></i></th>
+							    	<th scope="col">Minutes away <i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The number of minutes until the next train is expected to arrive at the destination."></i></th>
+							    </tr>
+                            </thead>
+                            <tbody id="schedule-body">
+                            </tbody>
+                        </table>
+
+                    </div>        
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row content">
+            <div class="col-md-12">
+                <div class="card-border border-primary">
+                    <div class="card-body">
+                        <h5>Add Train Information Here</h5>
+                    
+                        <form>
+
+                            <div class="form-group">
+                                <label for="trainName">Train name</label>
+                                <input type="text" class="form-control" id="train-name" placeholder="Where are we going?">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="text" class="form-control" id="destination" placeholder="Where are we going?">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstTrainTime">First train time (HH:mm - military time) </label>
+                                <small id="not-military-time" class="form-validation"></small>
+                                <input type="text" class="form-control" id="first-train-time" placeholder="Where are we going?">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency">Frequency (min)</label>
+                                <small id="not-a-number" class="form-validation"></small>
+                                <input type="text" class="form-control" id="frequency" placeholder="Where are we going?">
+                            </div>
+                            <p id="missing-field" class="form-validation"></p>
+                            <button type="submit" class="btn btn-primary rounded" id="submit-button" data-toggle="modal">Add train to schedule</button>
+                            <div class="modal" id="addTrain" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                        <h5 class="modal-title text-white">Train successfully added</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="add-train-modal ml-3 mt-3">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                        </form> 
+                        <div class="modal" id="removeTrain" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-primary">
+                                      <h5 class="modal-title text-white">Are you sure you want to remove this train?</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="remove-train-modal ml-3 mt-3">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="remove-train-btn">Remove</button>
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  <script src="assets/javascript/logic2.js"></script>
+
+
+</body>
+</html>
+>>>>>>> 37c463bcf5e77962809ab9c600aeef1287a1efac
