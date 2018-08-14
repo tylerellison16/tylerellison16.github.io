@@ -109,6 +109,7 @@ document.addEventListener('keypress', (event) => {
         docUnderscore.innerHTML = underScore;
     }
 
+    docRightGuess[0].innerHTML = rightWord;
     docWrongGuess[0].innerHTML = wrongWord;
     docUnderscore[0].innerHTML = underScore.join(' ');
 
